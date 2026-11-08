@@ -2,86 +2,121 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jovinull</title>
-<meta name="description" content="Projects by Jovinull. Reverse engineering, decompilation and preservation work.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Felipe Jovino (Jovinull): projects</title>
+<meta name="description" content="Open projects by Felipe Jovino, known online as Jovinull: VESPER, a campaign mod for Mindustry, the Sonic Heroes GameCube decompilation, StinkOS and more.">
 <link rel="canonical" href="https://jovinull.github.io/">
-<meta name="theme-color" content="#0b0f17">
+<meta name="theme-color" content="#ffffff">
 <meta name="google-site-verification" content="utWnEPNpnWjf8I1sPLtGmOxQdwQw-526jhRBepi9gjk" />
 
-<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jovinull">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Felipe Jovino (Jovinull)">
 <meta property="og:site_name" content="Jovinull">
-<meta property="og:description" content="Projects by Jovinull. Reverse engineering, decompilation and preservation work.">
+<meta property="og:description" content="Open projects by Felipe Jovino, known online as Jovinull: VESPER for Mindustry, the Sonic Heroes decompilation, StinkOS and more.">
 <meta property="og:url" content="https://jovinull.github.io/">
+<meta property="og:image" content="https://jovinull.github.io/avatar.jpg">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Jovinull",
-  "url": "https://jovinull.github.io/"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://jovinull.github.io/#site",
+      "name": "Jovinull",
+      "url": "https://jovinull.github.io/",
+      "author": { "@id": "https://jovinull.github.io/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://jovinull.github.io/#person",
+      "name": "Felipe Jovino",
+      "alternateName": "Jovinull",
+      "url": "https://jovinull.github.io/",
+      "image": "https://jovinull.github.io/avatar.jpg",
+      "sameAs": [
+        "https://github.com/Jovinull",
+        "https://www.youtube.com/@Jovinull",
+        "https://www.jovinull.com.br/"
+      ]
+    }
+  ]
 }
 </script>
 
 <style>
-:root{
-  --bg:#0b0f17; --card:#151c2b; --line:#25304a; --line2:#334063;
-  --txt:#e7ecf5; --mut:#9aa7c2; --dim:#7d8ba8; --acc:#38bdf8;
-  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+html{-webkit-text-size-adjust:100%}
+body{margin:0 auto;max-width:40em;padding:2.5em 1em 3em;background:#fff;color:#1a1a1a;
+  font:18px/1.5 Georgia,"Times New Roman",serif}
+a{color:#0b3fb3}
+a:visited{color:#5a2a92}
+h1{font-size:2em;line-height:1.15;margin:0}
+h2{font-size:1.25em;margin:2em 0 .3em}
+p{margin:.6em 0}
+img{max-width:100%;height:auto;display:block}
+.me{float:right;width:96px;height:96px;margin:0 0 .6em 1em}
+.aka{color:#555;margin-top:.2em}
+.doom{font-style:italic}
+.out{font-size:.9em}
+.banner{margin:.6em 0}
+ul{padding:0;list-style:none;margin:.6em 0}
+li{margin:.7em 0}
+hr{border:0;border-top:1px solid #bbb;margin:2.5em 0 1em}
+footer{font-size:.85em;color:#555}
+@media (prefers-color-scheme:dark){
+  body{background:#161616;color:#ddd}
+  a{color:#8ab4f8}
+  a:visited{color:#c58af9}
+  .aka,footer{color:#aaa}
+  hr{border-top-color:#444}
 }
-*{box-sizing:border-box}
-body{
-  margin:0; background:var(--bg); color:var(--txt);
-  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  line-height:1.6; -webkit-font-smoothing:antialiased;
-  display:flex; align-items:center; min-height:100vh;
-}
-.wrap{max-width:680px; margin:0 auto; padding:64px 24px; width:100%}
-.eyebrow{font:600 .78rem/1 var(--mono); letter-spacing:.18em; text-transform:uppercase; color:var(--acc)}
-h1{font-size:clamp(2.2rem,7vw,3.2rem); margin:16px 0 0; letter-spacing:-.03em; font-weight:800}
-.sub{color:var(--mut); margin:14px 0 0; max-width:52ch}
-h2{font:600 .78rem/1 var(--mono); letter-spacing:.16em; text-transform:uppercase;
-   color:var(--dim); margin:56px 0 16px}
-a.card{
-  display:block; background:var(--card); border:1px solid var(--line);
-  border-radius:14px; padding:20px 22px; text-decoration:none; color:inherit;
-  transition:.15s;
-}
-a.card:hover{border-color:var(--acc); transform:translateY(-1px)}
-a.card .t{font-weight:700; font-size:1.05rem}
-a.card .d{color:var(--mut); font-size:.92rem; margin-top:6px}
-a.card .m{font-family:var(--mono); font-size:.78rem; color:var(--dim); margin-top:10px}
-.links{display:flex; flex-wrap:wrap; gap:18px; margin-top:44px;
-  padding-top:24px; border-top:1px solid var(--line); font-size:.92rem}
-.links a{color:var(--acc); text-decoration:none}
-.links a:hover{text-decoration:underline}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
-<main class="wrap">
-  <div class="eyebrow">Jovinull</div>
-  <h1>Projects</h1>
-  <p class="sub">Reverse engineering, decompilation and preservation work.
-  Everything here is non-commercial and open source.</p>
+<header>
+  <img class="me" src="avatar.jpg" alt="Felipe Jovino" width="96" height="96">
+  <h1>Felipe Jovino</h1>
+  <p class="aka">Jovinull, pretty much everywhere online.</p>
+  <p class="doom">I wrote an operating system so I'd have somewhere to run Doom.</p>
+  <p>This is the list of what I've made in the open, mostly games or things that poke at games. The professional side lives on my <a href="https://www.jovinull.com.br/">portfolio</a>, and there's more about me on <a href="https://github.com/Jovinull">GitHub</a>.</p>
+  <p lang="pt-BR">Em português: o VESPER tem tradução completa para o português do Brasil, e o <a href="https://github.com/Jovinull/abc-do-esp32">ABC do ESP32</a> é um curso meu, com o material aberto.</p>
+</header>
 
-  <h2>Active</h2>
-  <a class="card" href="https://jovinull.github.io/sonicheroes/">
-    <div class="t">Sonic Heroes: GameCube Decompilation</div>
-    <div class="d">A work-in-progress matching decompilation. Hand-written C and C++
-    that rebuilds the retail binary byte for byte. No game code, no assets.</div>
-    <div class="m">C / C++ &nbsp;&middot;&nbsp; PowerPC &nbsp;&middot;&nbsp; CodeWarrior</div>
-  </a>
+<main>
+  <h2 id="vesper">VESPER, a campaign mod for Mindustry</h2>
+  <a class="banner" href="vesper/"><img src="vesper/media/banner.webp" alt="VESPER, an industrial world that remembers" width="1400" height="788"></a>
+  <p>An abandoned machine-planet that reacts to the factory you build on it. Five sectors so far, in public alpha.</p>
+  <p class="out"><a href="vesper/">About the mod</a> | <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3836105133">Steam Workshop</a> | <a href="https://github.com/Jovinull/VESPER">Source</a> | <a href="https://youtu.be/XoK3TWa6tCc">Trailer</a></p>
 
-  <div class="links">
-    <a href="https://github.com/Jovinull">GitHub profile</a>
-    <a href="https://github.com/Jovinull/sonicheroes">sonicheroes repository</a>
-  </div>
+  <h2 id="sonic-heroes">Sonic Heroes: GameCube Decompilation</h2>
+  <p>A work-in-progress matching decompilation. Hand-written C and C++ that rebuilds the retail binary byte for byte. No game code, no assets. Non-commercial and open source.</p>
+  <p class="out"><a href="https://jovinull.github.io/sonicheroes/">Project site</a> | <a href="https://github.com/Jovinull/sonicheroes">sonicheroes repository</a></p>
+
+  <h2>Other things, in no particular order of sanity</h2>
+  <ul>
+    <li><a href="https://github.com/Jovinull/StinkOS"><b>StinkOS</b></a>. A 32-bit x86 OS from scratch in C. Preemptive scheduler, a TCP/IP stack down to RFC 793, ELF userland, its own package manager. Zero third-party libraries in the kernel. Doom runs on it.</li>
+    <li><a href="https://github.com/Jovinull/macrocosm"><b>macrocosm</b></a>. Dark matter particles coupled to a baryonic SPH fluid in expanding spacetime, volumetric rendering included. Pure C17.</li>
+    <li><a href="https://github.com/Jovinull/SmartyRed"><b>SmartyRed</b></a> and <a href="https://github.com/Jovinull/AwaLink"><b>AwaLink</b></a>. PPO agents learning Pokémon Red and Zelda: Link's Awakening from raw frames. One of them keeps track of roughly 1700 event flags. They are both very patient.</li>
+    <li><a href="https://github.com/Jovinull/FactoryScope"><b>FactoryScope</b></a>. Read-only diagnostics and troubleshooting for Mindustry factories.</li>
+    <li><a href="https://github.com/Jovinull/Chestwise"><b>Chestwise</b></a>. A Minecraft storage mod: search, move, craft and organize items across chests without cables, power or disks.</li>
+    <li><a href="https://github.com/Jovinull/RegionReveal"><b>RegionReveal</b></a>. A Cube World Alpha mod. Walk into a named area and every label in it appears on the world map.</li>
+    <li><a href="https://github.com/Jovinull/Caramelo--Faro-do-Encantado"><b>Caramelo</b></a>. A short pixel-art exploration game made for the Praia Games 2026 jam. Get a caramelo dog across a Brazilian neighborhood during a supernatural storm.</li>
+    <li><a href="https://github.com/Jovinull/thousand-robots-maze"><b>Can 1,000 robots learn to escape a maze?</b></a> A reproducible tabular Q-learning experiment, with controls, multi-seed statistics and tests.</li>
+    <li><a href="https://github.com/Jovinull/Bixim"><b>Bixim</b></a>. A Tamagotchi engine that runs on an ESP32 and on your desktop from the same codebase.</li>
+    <li><a href="https://github.com/Jovinull/rinha-2026-zig"><b>rinha-2026-zig</b></a>. Vectorized k-NN over a quantized IVF index. In Zig, without libc, on 0.40 of a vCPU.</li>
+    <li><a href="https://github.com/Jovinull/SignForest"><b>SignForest</b></a>. Real-time Libras recognition from a webcam.</li>
+  </ul>
 </main>
+
+<hr>
+<footer>
+  <p><a href="https://github.com/Jovinull">GitHub</a> | <a href="https://www.youtube.com/@Jovinull">YouTube</a> | <a href="https://www.jovinull.com.br/">Portfolio</a></p>
+  <p>In June 2026 GitHub's anti-abuse system suspended my account. False positive, Support confirmed it. Apparently committing this much trips the automation. I choose to read this as a compliment.</p>
+  <p><a href="https://www.youtube.com/watch?v=lYbYoaBrXpU"><i>See You Space Cowboy...</i></a></p>
+</footer>
 </body>
 </html>
